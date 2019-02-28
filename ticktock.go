@@ -62,7 +62,7 @@ func Cancel(name string) {
 	defaultScheduler.Cancel(name)
 }
 
-// Starts the jobs registered for the default scheduler.
+// Start starts the jobs registered for the default scheduler.
 func Start() {
 	defaultScheduler.Start()
 }
@@ -116,7 +116,7 @@ func (s *Scheduler) Cancel(name string) {
 	delete(s.jobs, name)
 }
 
-// Starts to schedule the jobs.
+// Start starts to schedule the jobs.
 func (s *Scheduler) Start() {
 	s.started = true
 	for _, j := range s.jobs {
